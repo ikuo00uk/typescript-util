@@ -1,3 +1,11 @@
 # ts-util
+typescriptでの汎用関数
 
-ts-util-library
+## Pages
+<https://ikuo00uk.github.io/typescript-util/>
+
+
+## Setup
+`npm install`  
+`npm run watch`  
+readmore -> package.json

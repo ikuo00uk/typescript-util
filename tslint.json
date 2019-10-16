@@ -11,11 +11,12 @@
     "no-var-keyword": true,
     "no-parameter-reassignment": true,
     "typedef": [true, "call-signature"],
+    "prefer-const": false,
+    "prefer-for-of": false,
+    "number-literal-format": true,
 
     // Immutability rules
     "readonly-keyword": true,
-    "readonly-array": true,
-    "no-object-mutation": true,
     "no-delete": true,
     "no-method-signature": true,
 

@@ -13,13 +13,13 @@
  * @return ランダム数字
  *
  */
-const getRandomInt =(min:number, max:number): number => {
-  return Math.floor(Math.random() * (max - min + 1)) + min
-}
+const getRandomInt = (min: number, max: number): number => {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+};
 
 /**
  * 配列を一定の長さで再生成する
- * 
+ *
  * ### Example
  * ```js
  * import { regenerateArray } from './random'
@@ -31,20 +31,20 @@ const getRandomInt =(min:number, max:number): number => {
  * @param num: インデックス
  * @return 再生成した配列
  */
-const regenerateArray = (array:Array<any>, num:number): Array<any> => {
-  let a = array
-  let t:Array<any> = [], r = [];
-  let l = a.length
-  let n = num < l ? num : l
+const regenerateArray = (array: readonly any[], num: number): readonly any[] => {
+  const a = array;
+  let t: any[] = [];
+  let r: any[] = [];
+  let l = a.length;
+  let n = num < l ? num : l;
   while (n-- > 0) {
-    let i = (Math.random() * l) | 0
-    r[n] = t[i] || a[i]
-    --l
-    t[i] = t[l] || a[l]
+    const i = (Math.random() * l) || 0;
+    r[n] = t[i] || a[i];
+    --l;
+    t[i] = t[l] || a[l];
   }
-  return r
-}
-
+  return r;
+};
 
 /**
  * 無作為にユーザーIDを生成する(SNSなどの)
@@ -76,18 +76,16 @@ const generateRandomUserId = (l: number = 8): string => {
  * @param array シャッフルしたい配列
  * @return array
  */
-const shuffle = (array:Array<any>) => {
-  let i = array.length
+const shuffle = (array: any[]) => {
+  let a = array;
+  let i = a.length;
   while (i) {
-    const j = Math.floor(Math.random() * i)
-    let t = array[--i]
-    array[i] = array[j]
-    array[j] = t
+    const j = Math.floor(Math.random() * i);
+    const t = a[--i];
+    a[i] = a[j];
+    a[j] = t;
   }
-  return array
-}
-
-
-
+  return a;
+};
 
 export { generateRandomUserId, getRandomInt, regenerateArray, shuffle };
