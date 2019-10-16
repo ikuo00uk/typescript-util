@@ -31,14 +31,17 @@ const getRandomInt = (min: number, max: number): number => {
  * @param num: インデックス
  * @return 再生成した配列
  */
-const regenerateArray = (array: readonly any[], num: number): readonly any[] => {
+const regenerateArray = (
+  array: readonly any[],
+  num: number
+): readonly any[] => {
   const a = array;
   let t: any[] = [];
   let r: any[] = [];
   let l = a.length;
   let n = num < l ? num : l;
   while (n-- > 0) {
-    const i = (Math.random() * l) || 0;
+    const i = Math.random() * l || 0;
     r[n] = t[i] || a[i];
     --l;
     t[i] = t[l] || a[l];
