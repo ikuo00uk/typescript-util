@@ -38,7 +38,7 @@ const regenerateArray = (
   const a = array;
   let t: any[] = [];
   let r: any[] = [];
-  let l = a.length;
+  let l = a.length || 0;
   let n = num < l ? num : l;
   while (n-- > 0) {
     const i = Math.random() * l || 0;
@@ -60,7 +60,7 @@ const regenerateArray = (
  * ```
  *
  * @param l: 生成したい文字列
- * @returns ランダム文字列
+ * @return string ランダム文字列
  *
  */
 const generateRandomUserId = (l: number = 8): string => {
