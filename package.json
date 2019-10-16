@@ -5,7 +5,7 @@
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",
   "module": "build/module/index.js",
-  "repository": "https://github.com/ikuo00uk/ts-util",
+  "repository": "https://github.com/ikuo00uk/typescript-util",
   "license": "MIT",
   "keywords": [],
   "scripts": {
