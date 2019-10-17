@@ -16,39 +16,6 @@
 const getRandomInt = (min: number, max: number): number => {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 };
-
-/**
- * 配列を一定の長さで再生成する
- *
- * ### Example
- * ```js
- * import { regenerateArray } from './random'
- * console.log(regenerateArray([0,1,2,3,4,5],2)))
- * // => 2インデックスで、新しい配列が生成される。
- * ```
- *
- * @param array: 配列
- * @param num: インデックス
- * @return 再生成した配列
- */
-const regenerateArray = (
-  array: readonly any[],
-  num: number
-): readonly any[] => {
-  const a = array;
-  let t: any[] = [];
-  let r: any[] = [];
-  let l = a.length || 0;
-  let n = num < l ? num : l;
-  while (n-- > 0) {
-    const i = Math.random() * l || 0;
-    r[n] = t[i] || a[i];
-    --l;
-    t[i] = t[l] || a[l];
-  }
-  return r;
-};
-
 /**
  * 無作為にユーザーIDを生成する(SNSなどの)
  *
@@ -91,4 +58,4 @@ const shuffle = (array: any[]) => {
   return a;
 };
 
-export { generateRandomUserId, getRandomInt, regenerateArray, shuffle };
+export { generateRandomUserId, getRandomInt, shuffle };
