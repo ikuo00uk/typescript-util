@@ -21,6 +21,9 @@ jobs:
       - run: npm test
       - run: npm run cov:send
       - run: npm run cov:check
+      - run: npm run doc:build
+      - run: npm run doc:publish
+
   'node-latest':
     docker:
       - image: circleci/node:latest
