@@ -30,7 +30,7 @@ const getRandomInt = (min: number, max: number): number => {
  * @return string ランダム文字列
  *
  */
-const generateRandomUserId = (l: number = 8): string => {
+const generateRandomUserId = (l: number): string => {
   const c = 'abcdefghijklmnopqrstuvwxyz0123456789_';
   const cl = c.length;
   let _id = '';

@@ -3,7 +3,7 @@ import test from 'ava';
 import { generateRandomUserId, getRandomInt, shuffle } from './random';
 
 test('generateRandomUserId', t => {
-  const uid = generateRandomUserId(10);
+  const uid = generateRandomUserId(8);
   t.true(typeof uid === 'string');
   t.is(generateRandomUserId(-1), '');
   t.is(generateRandomUserId(1.23).length, 2);
